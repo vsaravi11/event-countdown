@@ -1,25 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
     <style>
-        #countdown {
+        body {
             font-family: Arial, sans-serif;
-            font-size: 72px; /* Increase font size here */
-            font-weight: bold;
-            color: #333; /* Text color */
-            background: none; /* Remove background color */
-            border: none; /* Remove any border */
-            padding: 0; /* Remove any padding */
-            margin: 0; /* Remove any margin */
-            text-align: center; /* Center the text if needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #countdown {
+            font-size: 2em;
         }
     </style>
 </head>
 <body>
-    <!-- Countdown timer container -->
     <div id="countdown"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -35,7 +34,7 @@
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-                    minutes + "m " + seconds + "s ";
+                minutes + "m " + seconds + "s ";
 
                 if (distance < 0) {
                     clearInterval(x);
