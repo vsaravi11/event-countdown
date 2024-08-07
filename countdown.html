@@ -17,10 +17,11 @@
             align-items: center;
         }
         #countdown {
-            font-size: 60px; /* Adjusted font size */
+            font-size: 48px; /* Adjust font size to fit better */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 20px; /* Add padding to prevent cutoff */
+            padding: 20px; /* Increase padding */
+            margin: 20px; /* Add margin to ensure space around the element */
             box-sizing: border-box; /* Include padding in width/height calculation */
         }
     </style>
@@ -40,12 +41,12 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
-
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                    document.getElementById("countdown").innerHTML = "00d 00h 00m 00s";
+                } else {
+                    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                    minutes + "m " + seconds + "s ";
                 }
             }, 1000);
         });
