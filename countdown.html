@@ -17,10 +17,11 @@
             align-items: center;
         }
         #countdown {
-            font-size: 72px;
+            font-size: 60px; /* Adjusted font size */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 10px; /* Add padding if needed */
+            padding: 20px; /* Add padding to prevent cutoff */
+            box-sizing: border-box; /* Include padding in width/height calculation */
         }
     </style>
 </head>
