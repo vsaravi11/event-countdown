@@ -17,15 +17,32 @@
             text-align: center; /* Center the text if needed */
         }
     </style>
-    <!-- Link to the JavaScript file hosted on GitHub -->
-    <script src="https://vsaravi11.github.io/event-countdown/countdown.js"></script>
 </head>
 <body>
     <!-- Countdown timer container -->
     <div id="countdown"></div>
     <script>
-        // Initialize the countdown timer with the target date
-        startCountdown('2024-09-05T20:20:00'); // Set to September 5th, 2024 at 8:20 PM
+        document.addEventListener("DOMContentLoaded", function() {
+            var countDownDate = new Date("Sep 5, 2024 20:20:00").getTime();
+
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                    minutes + "m " + seconds + "s ";
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
