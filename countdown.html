@@ -17,12 +17,18 @@
             align-items: center;
         }
         #countdown {
-            font-size: 5vw; /* Adjust font size using viewport width */
+            font-size: 68px; /* Larger font size */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
             padding: 20px; /* Add padding to prevent cutoff */
             box-sizing: border-box; /* Include padding in width/height calculation */
             text-align: center; /* Center the text */
+            overflow: hidden; /* Hide overflow */
+        }
+        @media (max-width: 600px) {
+            #countdown {
+                font-size: 48px; /* Smaller font size for smaller screens */
+            }
         }
     </style>
 </head>
