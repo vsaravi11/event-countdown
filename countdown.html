@@ -10,21 +10,26 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background: transparent;
+            background: transparent; /* Ensure no background color */
             overflow: hidden; /* Prevent scrollbars */
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: 72px; /* Large font size */
-            background-color: transparent;
-            white-space: nowrap;
-            padding: 40px; /* Increased padding for more space */
+            font-size: 72px;
+            background-color: transparent; /* Ensure the countdown has no background */
+            white-space: nowrap; /* Prevent wrapping of the countdown text */
+            padding: 0 20px; /* Horizontal padding to avoid text cutoff */
             box-sizing: border-box; /* Include padding in width/height calculation */
             text-align: center; /* Center the text */
-            max-width: 100vw; /* Allow countdown to use full viewport width */
-            overflow: hidden; /* Hide any overflow */
+            max-width: 100%; /* Allow countdown to use full width */
+        }
+        @media (max-width: 600px) {
+            #countdown {
+                font-size: 48px; /* Adjust font size for smaller screens */
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
         }
     </style>
 </head>
