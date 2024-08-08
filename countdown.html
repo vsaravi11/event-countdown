@@ -10,16 +10,23 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background: transparent; /* Ensure no background color */
-            overflow: hidden; /* Prevent scrollbars */
+            background: transparent;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: 72px;
-            background-color: transparent; /* Ensure the countdown has no background */
-            white-space: nowrap; /* Prevent wrapping of the countdown text */
+            font-size: 5vw; /* Adjust font size based on viewport width */
+            background-color: transparent;
+            white-space: nowrap;
+            padding: 10px; /* Add padding if needed */
+            box-sizing: border-box; /* Include padding in width/height calculation */
+        }
+        @media (min-width: 600px) {
+            #countdown {
+                font-size: 72px; /* Use a larger font size for larger screens */
+            }
         }
     </style>
 </head>
@@ -43,7 +50,7 @@
 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                    document.getElementById("countdown").innerHTML = "00d 00h 00m 00s";
                 }
             }, 1000);
         });
