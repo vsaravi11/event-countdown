@@ -10,19 +10,28 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background: transparent; /* Ensure no background color */
-            overflow: hidden; /* Prevent scrollbars */
+            background: transparent;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: 5vw; /* Adjust font size using viewport width */
-            background-color: transparent; /* Ensure the countdown has no background */
-            white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 20px; /* Add padding to prevent cutoff */
+            font-size: 5vw; /* Responsive font size based on viewport width */
+            background-color: transparent;
+            white-space: nowrap;
+            text-align: center;
+            padding: 1rem; /* Padding to prevent cutoff */
             box-sizing: border-box; /* Include padding in width/height calculation */
-            text-align: center; /* Center the text */
+            max-width: 90vw; /* Ensure countdown does not exceed 90% of viewport width */
+            overflow: hidden; /* Hide any overflow */
+        }
+        @media (max-width: 600px) {
+            #countdown {
+                font-size: 7vw; /* Adjust font size for smaller screens */
+                padding: 0.5rem; /* Adjust padding for smaller screens */
+                max-width: 95vw; /* Adjust max-width for smaller screens */
+            }
         }
     </style>
 </head>
@@ -41,8 +50,8 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
+                document.getElementById("countdown").innerHTML = 
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
                 if (distance < 0) {
                     clearInterval(x);
