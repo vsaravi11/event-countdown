@@ -10,29 +10,33 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background: transparent;
-            overflow: hidden;
+            background: transparent; /* Ensure no background color */
+            overflow: hidden; /* Prevent scrollbars */
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: 120px; /* Default font size for larger screens */
-            background-color: transparent;
-            white-space: nowrap;
-            text-align: center;
+            font-size: 72px; /* Default font size for larger screens */
+            background-color: transparent; /* Ensure the countdown has no background */
+            white-space: nowrap; /* Prevent wrapping of the countdown text */
             padding: 20px; /* Add padding to prevent cutoff */
-            box-sizing: border-box;
+            box-sizing: border-box; /* Include padding in width/height calculation */
+            text-align: center; /* Center the text */
         }
-        /* Media queries for smaller screens */
+        @media (max-width: 1200px) {
+            #countdown {
+                font-size: 60px; /* Slightly smaller font size for medium screens */
+            }
+        }
         @media (max-width: 768px) {
             #countdown {
-                font-size: 90px; /* Font size for tablets */
+                font-size: 48px; /* Smaller font size for tablets and small screens */
             }
         }
         @media (max-width: 480px) {
             #countdown {
-                font-size: 70px; /* Font size for mobile phones */
+                font-size: 36px; /* Smallest font size for very small screens */
             }
         }
     </style>
