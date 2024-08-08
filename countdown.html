@@ -11,22 +11,19 @@
             margin: 0;
             padding: 0;
             background: transparent;
-            overflow: hidden;
+            overflow: hidden; /* Prevent scrollbars */
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: 5vw; /* Adjust font size based on viewport width */
+            font-size: 4vw; /* Adjust font size based on viewport width */
             background-color: transparent;
             white-space: nowrap;
-            padding: 10px; /* Add padding if needed */
+            padding: 10px;
             box-sizing: border-box; /* Include padding in width/height calculation */
-        }
-        @media (min-width: 600px) {
-            #countdown {
-                font-size: 72px; /* Use a larger font size for larger screens */
-            }
+            text-align: center; /* Center the text */
+            max-width: 100vw; /* Prevent the countdown from exceeding viewport width */
         }
     </style>
 </head>
