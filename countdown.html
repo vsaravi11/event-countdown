@@ -10,29 +10,16 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background: transparent;
-            overflow: hidden;
+            background: transparent; /* Ensure no background color */
+            overflow: hidden; /* Prevent scrollbars */
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: 80px; /* Increased font size */
-            background-color: transparent;
-            white-space: nowrap;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        @media (max-width: 768px) {
-            #countdown {
-                font-size: 60px; /* Font size for tablets */
-            }
-        }
-        @media (max-width: 480px) {
-            #countdown {
-                font-size: 45px; /* Font size for mobile phones */
-            }
+            font-size: 72px;
+            background-color: transparent; /* Ensure the countdown has no background */
+            white-space: nowrap; /* Prevent wrapping of the countdown text */
         }
     </style>
 </head>
@@ -56,7 +43,7 @@
 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "00d 00h 00m 00s";
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
                 }
             }, 1000);
         });
