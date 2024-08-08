@@ -17,14 +17,19 @@
             align-items: center;
         }
         #countdown {
-            font-size: 68px; /* Font size for laptop screens */
+            font-size: 72px; /* Set a larger default font size */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
             text-align: center;
         }
-        @media (max-width: 768px) { /* Tablets and smaller screens */
+        @media (max-width: 1024px) { /* Larger tablets and smaller laptops */
             #countdown {
-                font-size: 65px; /* Adjusted font size for tablets */
+                font-size: 60px; /* Adjusted font size for medium screens */
+            }
+        }
+        @media (max-width: 768px) { /* Tablets */
+            #countdown {
+                font-size: 50px; /* Further adjust font size for tablets */
             }
         }
         @media (max-width: 480px) { /* Mobile phones */
