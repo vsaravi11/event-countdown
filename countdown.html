@@ -17,19 +17,18 @@
             align-items: center;
         }
         #countdown {
-            font-size: 68px; /* Adjusted font size for better fit */
+            font-size: calc(10vw + 10vh); /* Responsive font size */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 0 20px; /* Padding to prevent cutoff */
+            padding: 1rem; /* Padding to prevent cutoff */
             box-sizing: border-box; /* Include padding in width/height calculation */
             text-align: center; /* Center the text */
-            max-width: 90vw; /* Ensure the countdown doesn't exceed 90% of viewport width */
+            max-width: 100%; /* Ensure countdown doesn't exceed viewport width */
         }
         @media (max-width: 600px) {
             #countdown {
-                font-size: 48px; /* Reduced font size for smaller screens */
-                padding: 0 10px; /* Adjusted padding for smaller screens */
-                max-width: 90vw; /* Ensure countdown doesn't exceed 90% of viewport width */
+                font-size: calc(8vw + 8vh); /* Adjust font size for smaller screens */
+                padding: 0.5rem; /* Adjust padding for smaller screens */
             }
         }
     </style>
