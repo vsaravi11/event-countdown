@@ -17,11 +17,9 @@
             align-items: center;
         }
         #countdown {
-            font-size: 68px; /* Set font size to 68px */
+            font-size: 72px;
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 20px; /* Add padding to prevent cutoff */
-            box-sizing: border-box; /* Include padding in width/height calculation */
         }
     </style>
 </head>
@@ -29,7 +27,7 @@
     <div id="countdown"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var countDownDate = new Date("2024-09-05T20:20:00-04:00").getTime(); // EDT time
+            var countDownDate = new Date("Sep 5, 2024 20:20:00").getTime();
 
             var x = setInterval(function() {
                 var now = new Date().getTime();
@@ -40,12 +38,12 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "00d 00h 00m 00s";
-                } else {
-                    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-                    minutes + "m " + seconds + "s ";
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
                 }
             }, 1000);
         });
