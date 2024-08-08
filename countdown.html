@@ -17,12 +17,23 @@
             align-items: center;
         }
         #countdown {
-            font-size: 6vw; /* Responsive font size based on viewport width */
+            font-size: 72px; /* Default font size for larger screens */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
             padding: 20px; /* Add padding to prevent cutoff */
             box-sizing: border-box;
+        }
+        /* Media queries for smaller screens */
+        @media (max-width: 768px) {
+            #countdown {
+                font-size: 50px; /* Adjust font size for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            #countdown {
+                font-size: 40px; /* Adjust font size for mobile phones */
+            }
         }
     </style>
 </head>
