@@ -17,14 +17,12 @@
             align-items: center;
         }
         #countdown {
-            font-size: 6vw; /* Responsive font size */
+            font-size: 5vw; /* Adjust font size using viewport width */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 1rem; /* Padding to prevent cutoff */
+            padding: 20px; /* Add padding to prevent cutoff */
             box-sizing: border-box; /* Include padding in width/height calculation */
             text-align: center; /* Center the text */
-            max-width: 100%; /* Ensure countdown doesn't exceed viewport width */
-            overflow: hidden; /* Hide any overflow */
         }
     </style>
 </head>
@@ -43,12 +41,8 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Pad single digits with a leading zero
-                document.getElementById("countdown").innerHTML = 
-                    days + "d " + 
-                    String(hours).padStart(2, '0') + "h " + 
-                    String(minutes).padStart(2, '0') + "m " + 
-                    String(seconds).padStart(2, '0') + "s";
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
 
                 if (distance < 0) {
                     clearInterval(x);
