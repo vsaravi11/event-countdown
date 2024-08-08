@@ -11,25 +11,24 @@
             margin: 0;
             padding: 0;
             background: transparent; /* Ensure no background color */
-            overflow: hidden; /* Prevent scrollbars on larger screens */
+            overflow: hidden; /* Prevent scrollbars */
             display: flex;
             justify-content: center;
             align-items: center;
         }
         #countdown {
-            font-size: calc(4vw + 2vh); /* Responsive font size */
+            font-size: 68px; /* Adjusted font size for better fit */
             background-color: transparent; /* Ensure the countdown has no background */
             white-space: nowrap; /* Prevent wrapping of the countdown text */
-            padding: 0 20px; /* Increased padding to avoid text cutoff */
+            padding: 0 20px; /* Padding to prevent cutoff */
             box-sizing: border-box; /* Include padding in width/height calculation */
             text-align: center; /* Center the text */
             max-width: 90vw; /* Ensure the countdown doesn't exceed 90% of viewport width */
-            overflow: auto; /* Allow scrolling if necessary */
         }
         @media (max-width: 600px) {
             #countdown {
-                font-size: calc(8vw + 2vh); /* Larger font size for smaller screens */
-                padding: 0 15px; /* Adjusted padding for smaller screens */
+                font-size: 48px; /* Reduced font size for smaller screens */
+                padding: 0 10px; /* Adjusted padding for smaller screens */
                 max-width: 90vw; /* Ensure countdown doesn't exceed 90% of viewport width */
             }
         }
