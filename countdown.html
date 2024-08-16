@@ -27,16 +27,18 @@
         }
 
         h1 {
-            font-size: 38px;
+            font-size: 50px;
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 25px;
             margin: 5px 0 20px 0;
         }
 
         #logo {
             margin: 10px 0;
+            width: 100px;
+            height: auto;
         }
 
         #countdown {
@@ -58,8 +60,6 @@
         .time-number {
             display: block;
             font-size: inherit;
-            border: 2px solid blue; /* Blue border around numbers */
-            padding: 5px;
         }
 
         .time-label {
@@ -68,19 +68,19 @@
             text-transform: uppercase;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1024px) { /* Larger tablets and smaller laptops */
             #countdown {
                 font-size: 58px;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 768px) { /* Tablets */
             #countdown {
                 font-size: 48px;
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 480px) { /* Mobile phones */
             #countdown {
                 font-size: 30px;
                 padding: 0 10px;
@@ -90,7 +90,7 @@
 </head>
 <body>
     <h1>NFL Kickoff 2024</h1>
-    <img id="logo" src="https://upload.wikimedia.org/wikipedia/en/a/a2/NFL_Logo.svg" alt="Football Logo" width="100"> <!-- Football logo -->
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/American_football_pictogram.svg/800px-American_football_pictogram.svg.png" alt="Football Logo">
     <h2>Countdown to September 5th, 2024</h2>
     <div id="countdown"></div>
     <script>
