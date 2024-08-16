@@ -17,16 +17,18 @@
             align-items: center;
             flex-direction: column;
             text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         h1 {
-            font-size: 36px; /* Title size */
+            font-size: 38px;
             margin: 0;
             padding: 0;
         }
 
         h2 {
-            font-size: 20px; /* Subtitle size */
+            font-size: 22px;
             margin: 5px 0 20px 0;
         }
 
@@ -34,14 +36,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 50px; /* Default font size for laptops */
+            font-size: 68px; /* Set to 68px for laptops */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
+            padding-top: 10px;
         }
 
         .time-unit {
             margin: 0 10px;
+            padding: 0 5px;
         }
 
         .time-number {
@@ -51,25 +55,25 @@
 
         .time-label {
             display: block;
-            font-size: 0.5em; /* Smaller font for the labels */
+            font-size: 0.5em;
             text-transform: uppercase;
         }
 
         @media (max-width: 1024px) {
             #countdown {
-                font-size: 45px;
+                font-size: 58px;
             }
         }
 
         @media (max-width: 768px) {
             #countdown {
-                font-size: 40px;
+                font-size: 48px;
             }
         }
 
         @media (max-width: 480px) {
             #countdown {
-                font-size: 30px;
+                font-size: 30px; /* Set to 30px for mobile phones */
                 padding: 0 10px;
             }
         }
