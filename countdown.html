@@ -27,11 +27,11 @@
         }
 
         h1 {
-            font-size: 55px;
+            font-size: 55px; /* Set to 55px for laptops */
         }
 
         h2 {
-            font-size: 27px;
+            font-size: 30px; /* Set to 30px for laptops */
             margin: 5px 0 20px 0;
         }
 
@@ -39,7 +39,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 72px; /* Set to 68px for laptops */
+            font-size: 72px; /* Set to 72px for laptops */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
@@ -62,21 +62,15 @@
             text-transform: uppercase;
         }
 
-        @media (max-width: 1024px) { /* Larger tablets and smaller laptops */
-            #countdown {
-                font-size: 58px;
-            }
-        }
-
-        @media (max-width: 768px) { /* Tablets */
-            #countdown {
-                font-size: 68px;
-            }
-        }
-
         @media (max-width: 480px) { /* Mobile phones */
+            h1 {
+                font-size: 30px; /* Reduced font size for mobile phones */
+            }
+            h2 {
+                font-size: 30px; /* Reduced font size for mobile phones */
+            }
             #countdown {
-                font-size: 30px;
+                font-size: 30px; /* Reduced font size for mobile phones */
                 padding: 0 10px;
             }
         }
