@@ -22,9 +22,9 @@
             width: 100%;
             max-width: 1000px;
             text-align: center;
-            margin: 0 auto;
+            margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Ensure padding and borders are included in the element's width and height */
+            box-sizing: border-box;
         }
 
         h1, h2 {
@@ -33,11 +33,11 @@
         }
 
         h1 {
-            font-size: 55px; /* Title size for laptop screens */
+            font-size: 55px; /* Title size for laptops */
         }
 
         h2 {
-            font-size: 25px; /* Subtitle size for laptop screens */
+            font-size: 20px; /* Subtitle size for laptops */
             margin: 5px 0 20px 0;
         }
 
@@ -45,7 +45,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 72px; /* Font size for laptop screens */
+            font-size: 68px; /* Font size for laptops */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
@@ -74,11 +74,12 @@
                 font-size: 30px; /* Adjusted title size for mobile phones */
             }
             h2 {
-                font-size: 16px; /* Reduced subtitle size for mobile phones */
+                font-size: 14px; /* Reduced subtitle size for mobile phones */
             }
             #countdown {
                 font-size: 30px; /* Adjusted font size for countdown on mobile phones */
                 padding: 20px 0; /* Increased top and bottom padding for better spacing */
+                margin: 0 auto; /* Centering countdown on mobile */
             }
             .time-unit {
                 margin: 0 5px; /* Reduce margin between units to fit better on mobile screens */
