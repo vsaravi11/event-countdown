@@ -10,38 +10,84 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background: transparent; /* Ensure no background color */
-            overflow: hidden; /* Prevent scrollbars */
+            background: transparent;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: inherit;
         }
-        #countdown {
-            font-size: 68px; /* Default font size for laptops */
-            background-color: transparent; /* Ensure the countdown has no background */
-            white-space: nowrap; /* Prevent wrapping of the countdown text */
+
+        #container {
             text-align: center;
+            max-width: 1000px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        @media (max-width: 1024px) { /* Larger tablets and smaller laptops */
-            #countdown {
-                font-size: 58px; /* Adjusted font size for medium screens */
-            }
+
+        h1 {
+            font-size: 55px; /* Title size for laptops */
+            margin: 0;
         }
-        @media (max-width: 768px) { /* Tablets */
-            #countdown {
-                font-size: 48px; /* Further adjust font size for tablets */
-            }
+
+        h2 {
+            font-size: 20px; /* Subtitle size for laptops */
+            margin: 10px 0 20px 0;
         }
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 68px; /* Font size for laptops */
+            background-color: transparent;
+            white-space: nowrap;
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .time-unit {
+            margin: 0 10px; /* Adjusted margin to prevent cutoff */
+            padding: 0 10px;
+        }
+
+        .time-number {
+            display: block;
+            font-size: inherit;
+        }
+
+        .time-label {
+            display: block;
+            font-size: 0.5em;
+            text-transform: uppercase;
+        }
+
         @media (max-width: 480px) { /* Mobile phones */
+            h1 {
+                font-size: 30px; /* Adjusted title size for mobile phones */
+            }
+            h2 {
+                font-size: 14px; /* Reduced subtitle size for mobile phones */
+                margin: 5px 0;
+            }
             #countdown {
-                font-size: 30px; /* Reduced font size for mobile phones */
-                padding: 0 10px; /* Add horizontal padding to prevent cutoff */
+                font-size: 30px; /* Adjusted font size for countdown on mobile phones */
+                padding: 5px 0; /* Adjusted padding */
+            }
+            .time-unit {
+                margin: 0 5px; /* Reduce margin between units on mobile screens */
             }
         }
     </style>
 </head>
 <body>
-    <div id="countdown"></div>
+    <div id="container">
+        <h1>NFL Kickoff 2024</h1>
+        <h2>Countdown to September 5th, 2024</h2>
+        <div id="countdown"></div>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var countDownDate = new Date("Sep 5, 2024 20:20:00").getTime();
@@ -55,8 +101,24 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
+                document.getElementById("countdown").innerHTML = `
+                    <div class="time-unit">
+                        <span class="time-number">${days}</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number">${hours}</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number">${minutes}</span>
+                        <span class="time-label">Mins</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number">${seconds}</span>
+                        <span class="time-label">Secs</span>
+                    </div>
+                `;
 
                 if (distance < 0) {
                     clearInterval(x);
