@@ -18,11 +18,16 @@
             flex-direction: column;
             text-align: center;
             box-sizing: border-box;
+            font-family: inherit; /* Inherit the font style */
+        }
+
+        h1, h2 {
+            font-family: inherit; /* Inherit the font style */
+            margin: 0;
         }
 
         h1 {
             font-size: 38px;
-            margin: 0;
         }
 
         h2 {
@@ -71,7 +76,7 @@
 
         @media (max-width: 480px) {
             #countdown {
-                font-size: 30px; /* Set to 30px for mobile phones */
+                font-size: 30px; /* Reduced font size for mobile phones */
                 padding: 0 10px;
             }
         }
