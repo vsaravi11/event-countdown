@@ -16,9 +16,12 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            text-align: center;
-            box-sizing: border-box;
             font-family: inherit;
+        }
+
+        #container {
+            text-align: center;
+            margin-left: 10%; /* Adjust this value to move content to the right */
         }
 
         h1, h2 {
@@ -43,7 +46,7 @@
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
-            padding: 10px 0; /* Add padding at the top and bottom */
+            padding: 10px 0;
         }
 
         .time-unit {
@@ -80,9 +83,11 @@
     </style>
 </head>
 <body>
-    <h1>NFL Kickoff 2024</h1>
-    <h2>Countdown to September 5th, 2024</h2>
-    <div id="countdown"></div>
+    <div id="container">
+        <h1>NFL Kickoff 2024</h1>
+        <h2>Countdown to September 5th, 2024</h2>
+        <div id="countdown"></div>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var countDownDate = new Date("Sep 5, 2024 20:20:00").getTime();
