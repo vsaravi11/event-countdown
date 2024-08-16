@@ -15,13 +15,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             font-family: inherit;
         }
 
         #container {
             text-align: center;
-            margin-left: 2%; /* Adjusted margin to move the content more to the left */
+            width: 100%; /* Ensure the content is centered */
         }
 
         h1, h2 {
@@ -30,11 +29,11 @@
         }
 
         h1 {
-            font-size: 55px; /* Set to 55px for laptops */
+            font-size: 55px; /* Subtitle size for laptop screens */
         }
 
         h2 {
-            font-size: 16px; /* Further reduced font size for laptops */
+            font-size: 25px; /* Subtitle size for laptop screens, slightly reduced but not too small */
             margin: 5px 0 20px 0;
         }
 
@@ -42,7 +41,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 72px; /* Set to 72px for laptops */
+            font-size: 72px; /* Font size for laptop screens */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
@@ -67,14 +66,14 @@
 
         @media (max-width: 480px) { /* Mobile phones */
             h1 {
-                font-size: 30px; /* Font size for mobile phones */
+                font-size: 30px; /* Adjusted title size for mobile phones */
             }
             h2 {
-                font-size: 12px; /* Further reduced font size for mobile phones */
+                font-size: 16px; /* Further reduced subtitle size for mobile phones */
             }
             #countdown {
-                font-size: 30px; /* Font size for mobile phones */
-                padding: 20px 0; /* Increase top and bottom padding for better spacing */
+                font-size: 30px; /* Adjusted font size for countdown on mobile phones */
+                padding: 20px 0; /* Increased top and bottom padding for better spacing */
             }
             .time-unit {
                 margin: 0 5px; /* Reduce margin between units to fit better on mobile screens */
