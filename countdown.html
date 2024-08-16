@@ -19,22 +19,15 @@
         }
 
         #container {
-            width: 100%;
-            max-width: 1000px;
             text-align: center;
+            max-width: 1000px;
+            padding: 10px; /* Add padding to ensure content is within view */
             box-sizing: border-box;
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2 {
-            font-family: inherit;
-            margin: 0;
         }
 
         h1 {
             font-size: 55px; /* Title size for laptops */
+            margin: 0;
         }
 
         h2 {
@@ -50,8 +43,8 @@
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
-            padding: 10px 0;
             margin: 0 auto;
+            padding: 10px 0;
         }
 
         .time-unit {
@@ -76,14 +69,14 @@
             }
             h2 {
                 font-size: 14px; /* Reduced subtitle size for mobile phones */
+                margin: 5px 0;
             }
             #countdown {
                 font-size: 30px; /* Adjusted font size for countdown on mobile phones */
-                padding: 20px 0; /* Increased top and bottom padding for better spacing */
-                margin: 0 auto; /* Centering countdown on mobile */
+                padding: 10px 0; /* Adjusted padding */
             }
             .time-unit {
-                margin: 0 5px; /* Reduce margin between units to fit better on mobile screens */
+                margin: 0 5px; /* Reduce margin between units on mobile screens */
             }
         }
     </style>
