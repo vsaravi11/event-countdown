@@ -13,18 +13,18 @@
             background: transparent;
             overflow: hidden; /* Prevents scrollbars */
             display: flex;
-            justify-content: flex-end; /* Pushes content to the right */
-            align-items: center;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
             font-family: inherit;
-            box-sizing: border-box;
         }
 
         #container {
             text-align: center;
-            max-width: 800px;
-            padding: 5px 10px; /* Reduced padding */
+            width: 100%;
+            max-width: 800px; /* Optional: Max width to prevent it from being too wide */
+            padding: 0 10px; /* Reduced padding */
             box-sizing: border-box;
-            margin-left: auto; /* This pushes the container to the right */
+            margin: 0; /* Remove margins */
         }
 
         h1 {
@@ -41,16 +41,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 72px;
+            font-size: 72px; /* Default font size for laptops */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
-            padding: 5px 0; /* Reduced padding */
+            padding: 0; /* Remove padding */
         }
 
         .time-unit {
-            margin: 0 10px;
-            padding: 0 10px;
+            margin: 0 5px; /* Reduced margin */
+            padding: 0 5px; /* Reduced padding */
         }
 
         .time-number {
@@ -73,7 +73,6 @@
             }
             #countdown {
                 font-size: 60px;
-                padding: 5px 0;
             }
         }
 
@@ -99,10 +98,9 @@
             }
             #countdown {
                 font-size: 30px;
-                padding: 5px 0;
             }
             .time-unit {
-                margin: 0 5px;
+                margin: 0 2px; /* Further reduced margin for small screens */
             }
         }
     </style>
