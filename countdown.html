@@ -11,22 +11,18 @@
             margin: 0;
             padding: 0;
             background: transparent;
-            overflow: hidden;
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            align-items: center;
             font-family: inherit;
-            position: relative;
+            box-sizing: border-box;
         }
 
         #container {
-            display: block;
             text-align: center;
-            width: 100%;
             max-width: 800px;
             padding: 10px;
             box-sizing: border-box;
-            position: absolute; /* Positioning the container absolutely */
-            right: 50px; /* Move it more to the right */
-            top: 50%; /* Center vertically */
-            transform: translateY(-50%); /* Adjust for the top alignment */
         }
 
         h1 {
@@ -47,7 +43,6 @@
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
-            margin: 0 auto;
             padding: 10px 0;
         }
 
@@ -106,9 +101,6 @@
             }
             .time-unit {
                 margin: 0 5px;
-            }
-            #container {
-                right: 20px; /* Adjust for mobile */
             }
         }
     </style>
