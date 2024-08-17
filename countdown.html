@@ -21,9 +21,9 @@
         #container {
             text-align: center;
             width: 100%;
-            max-width: 800px;
+            max-width: 800px; /* Optional: Adjust max-width if needed */
             margin: 0 auto; /* Center horizontally */
-            padding: 0; /* No extra padding */
+            padding: 0; /* Remove all padding */
             box-sizing: border-box;
         }
 
@@ -34,12 +34,12 @@
 
         h1 {
             font-size: 55px;
-            margin-bottom: 10px; /* Reduced margin-bottom */
+            margin-bottom: 5px; /* Minimal bottom margin */
         }
 
         h2 {
             font-size: 30px;
-            margin-bottom: 10px; /* Reduced margin-bottom */
+            margin-bottom: 5px; /* Minimal bottom margin */
         }
 
         #countdown {
@@ -79,6 +79,7 @@
             }
             #countdown {
                 font-size: 60px;
+                padding: 0; /* Ensure no padding on medium screens */
             }
         }
 
@@ -91,6 +92,7 @@
             }
             #countdown {
                 font-size: 50px;
+                padding: 0; /* Ensure no padding on smaller screens */
             }
         }
 
@@ -100,13 +102,15 @@
             }
             h2 {
                 font-size: 16px;
+                margin-bottom: 3px; /* Reduced margin for mobile */
             }
             #countdown {
                 font-size: 30px;
-                margin: 0; /* Ensure no extra margin on mobile */
+                padding: 0; /* Ensure no padding on mobile */
+                margin: 0; /* Ensure no margin on mobile */
             }
             .time-unit {
-                margin: 0 3px; /* Adjusted margin for mobile */
+                margin: 0 2px; /* Further reduced margin for mobile */
             }
         }
     </style>
