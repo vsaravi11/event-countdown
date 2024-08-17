@@ -13,48 +13,46 @@
             background: transparent;
             overflow: hidden;
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            justify-content: center;
+            align-items: center;
             font-family: inherit;
         }
 
         #container {
+            display: block;
             text-align: center;
             width: 100%;
-            max-width: 800px;
-            padding: 0; /* Removed padding */
-            margin: 0; /* Removed margin */
+            max-width: 800px; /* Optional: Max width to prevent it from being too wide */
+            margin: 0 auto;
+            padding: 0 10px; /* Reduced padding to align more with the content */
             box-sizing: border-box;
-            position: relative;
         }
 
         h1 {
             font-size: 55px;
             margin: 0;
-            padding: 5px 0; /* Adjust padding if needed */
         }
 
         h2 {
             font-size: 30px;
-            margin: 0;
-            padding: 5px 0; /* Adjust padding if needed */
+            margin: 10px 0;
         }
 
         #countdown {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 72px;
+            font-size: 72px; /* Default font size for laptops */
             background-color: transparent;
             white-space: nowrap;
             text-align: center;
-            margin: 10px 0; /* Adjust margin */
-            padding: 5px 0; /* Adjust padding */
+            margin: 0 auto;
+            padding: 5px 0; /* Reduced padding to reduce space */
         }
 
         .time-unit {
-            margin: 0 5px;
-            padding: 0 5px;
+            margin: 0 10px;
+            padding: 0 10px;
         }
 
         .time-number {
@@ -90,26 +88,24 @@
             }
             #countdown {
                 font-size: 50px;
-                padding: 5px 0;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
                 font-size: 30px;
-                padding: 5px 0; /* Reduced padding */
             }
             h2 {
                 font-size: 16px;
-                padding: 5px 0; /* Reduced padding */
+                margin: 5px 0;
             }
             #countdown {
                 font-size: 30px;
-                padding: 0;
-                margin: 5px 0; /* Adjust margin */
+                padding: 5px 0;
+                margin: 0; /* Ensure no extra margin on mobile */
             }
             .time-unit {
-                margin: 0 2px; /* Reduced margin for small screens */
+                margin: 0 5px;
             }
         }
     </style>
