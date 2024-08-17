@@ -12,20 +12,21 @@
             padding: 0;
             background: transparent;
             overflow: hidden;
-            display: flex;
-            justify-content: flex-end; /* Align to the right */
-            align-items: center;
             font-family: inherit;
+            position: relative;
         }
 
         #container {
             display: block;
             text-align: center;
-            width: 100%; /* Ensure it takes the full width of the iframe */
-            max-width: 800px; /* Optional: Max width to prevent it from being too wide */
-            margin: 0 20px 0 0; /* Add right margin */
+            width: 100%;
+            max-width: 800px;
             padding: 10px;
             box-sizing: border-box;
+            position: absolute; /* Positioning the container absolutely */
+            right: 50px; /* Move it more to the right */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for the top alignment */
         }
 
         h1 {
@@ -105,6 +106,9 @@
             }
             .time-unit {
                 margin: 0 5px;
+            }
+            #container {
+                right: 20px; /* Adjust for mobile */
             }
         }
     </style>
