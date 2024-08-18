@@ -66,9 +66,16 @@
             text-transform: uppercase;
         }
 
-        /* Custom CSS to remove padding for the iframe container */
+        /* Reduce space around the iframe */
         .Ip-callout-container {
-            padding: 0px 0; /* Remove extra padding */
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+
+        iframe {
+            margin: 0px !important;
+            padding: 0px !important;
+            border: none;
         }
 
         @media (max-width: 1024px) {
