@@ -21,9 +21,9 @@
         #container {
             display: block;
             text-align: center;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
+            width: 100%; /* Ensure it takes the full width of the iframe */
+            max-width: 800px; /* Optional: Max width to prevent it from being too wide */
+            margin: 0 auto; /* Center horizontally */
             padding: 10px;
             box-sizing: border-box;
         }
@@ -64,18 +64,6 @@
             display: block;
             font-size: 0.5em;
             text-transform: uppercase;
-        }
-
-        /* Reduce space around the iframe */
-        .Ip-callout-container {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
-
-        iframe {
-            margin: 0px !important;
-            padding: 0px !important;
-            border: none;
         }
 
         @media (max-width: 1024px) {
@@ -127,6 +115,7 @@
         <h2>Countdown to September 5th, 2024</h2>
         <div id="countdown"></div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var countDownDate = new Date("Sep 5, 2024 20:20:00").getTime();
@@ -164,6 +153,20 @@
                     document.getElementById("countdown").innerHTML = "EXPIRED";
                 }
             }, 1000);
+
+            // Custom styles to reduce space and padding
+            var ipContainer = document.querySelector('.Ip-callout-container');
+            if (ipContainer) {
+                ipContainer.style.padding = "0px";
+                ipContainer.style.margin = "0px";
+            }
+
+            var iframe = document.querySelector('iframe');
+            if (iframe) {
+                iframe.style.padding = "0px";
+                iframe.style.margin = "0px";
+                iframe.style.border = "none";
+            }
         });
     </script>
 </body>
