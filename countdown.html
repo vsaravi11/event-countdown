@@ -128,28 +128,50 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = `
-                    <div class="time-unit">
-                        <span class="time-number">${days}</span>
-                        <span class="time-label">Days</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-number">${hours}</span>
-                        <span class="time-label">Hours</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-number">${minutes}</span>
-                        <span class="time-label">Mins</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-number">${seconds}</span>
-                        <span class="time-label">Secs</span>
-                    </div>
-                `;
-
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                    document.getElementById("countdown").innerHTML = `
+                        <div class="time-unit">
+                            <span class="time-number">0</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number">0</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number">0</span>
+                            <span class="time-label">Mins</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number">0</span>
+                            <span class="time-label">Secs</span>
+                        </div>
+                    `;
+                    var gameTime = document.createElement("h2");
+                    gameTime.textContent = "It's Game Time!";
+                    gameTime.style.fontSize = "50px";
+                    gameTime.style.marginTop = "20px";
+                    document.getElementById("container").appendChild(gameTime);
+                } else {
+                    document.getElementById("countdown").innerHTML = `
+                        <div class="time-unit">
+                            <span class="time-number">${days}</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number">${hours}</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number">${minutes}</span>
+                            <span class="time-label">Mins</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number">${seconds}</span>
+                            <span class="time-label">Secs</span>
+                        </div>
+                    `;
                 }
             }, 1000);
         });
